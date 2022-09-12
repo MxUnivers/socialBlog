@@ -62,7 +62,7 @@ const AddPost = () => {
                 <div className="py-3 bg-blue-600 text-center relative " >
                     <div className="absolute shadow-lg border border-gray-300 top-1 left-3 py-1 flex space-x-3 items-center bg-gray-200 rounded-2xl px-3">
                         <img src={`https://randomuser.me/api/portraits/men/32.jpg`}  className="rounded-[50%] h-10 w-10 prose"/>
-                        <div className="font-bold textupper">author</div>
+                        <div className="font-bold textupper">{authorName}</div>
                     </div>
                     <h2 className="text-2xl font-bold">Créer un publication</h2>
                 </div>

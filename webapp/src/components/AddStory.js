@@ -3,10 +3,10 @@ import {BiWinkSmile} from "react-icons/bi"
 import { useNavigate } from 'react-router-dom'
 
 const AddStory = ({author , profilePicture}) => {
-  const navigate  =  useNavigate()
+  const navigate  =  useNavigate();
   return (
     <div className=" flex flex-col w-full px-2 rounded-lg ">
-      <div>Publier quelque chose</div>  
+      <div className="py-2 font-bold">Publier quelque chose</div>  
 
       <div className="w-full flex items-center space-x-2">
       <div>
@@ -17,7 +17,7 @@ const AddStory = ({author , profilePicture}) => {
         localStorage.setItem("profilePicture",profilePicture)
 
       }}>
-        <input type="text" className="rounded-lg shadow-sm py-1 px-2" placeholder="quoi de noeuf Aymar .."/>
+        <input type="text" className="rounded-lg shadow-sm py-1 px-2" placeholder={`story ${author} ...`}/>
         <BiWinkSmile className="h-6 w-6"/>
 
       </a>

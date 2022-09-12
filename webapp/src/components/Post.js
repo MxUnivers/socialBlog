@@ -34,7 +34,7 @@ const Post = ({IdPost,content,email, authorName,  title , description , time  ,c
                 localStorage.setItem("coverPicturePost",coverPicture )
                 localStorage.setItem("descritpionPost",description )
                 localStorage.setItem("contentPost",content )
-                localStorage.setItem("IdUser",IdPost )
+                localStorage.setItem("IdPost",IdPost )
                 localStorage.setItem("emailUser",email )
             }}>
             <h2 class="text-3xl font-extrabold">

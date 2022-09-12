@@ -15,29 +15,29 @@ const UserShema =  new mongoose.Schema({
         required : true,       
     },
     lastName:{
-        type:String , 
+        type:"String" , 
         required : true
     },
     code:{
-        type:String , 
+        type:"String" , 
         trim : true , default: "225"
     },
     telephone : {
-        type:String,
+        type:"String",
         trim : true
     },
     email : {
-        type:String , 
+        type:"String" , 
         required : true,
         unique : true
     },
     password : {
-        type:String, 
+        type:"String", 
         required :true
     },
     profilePicture : {
-         type:String ,
-         default:'',
+         type:"String" ,
+         default:"https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     isAdmin : {
         type: Boolean , 
@@ -67,10 +67,9 @@ const UserShema =  new mongoose.Schema({
         type :String,
         default:""
     }
-    
 },{timestamp : true} );
 
-UserShema.plugin(uniqueValidator)
+UserShema.plugin(uniqueValidator);
 
 const User =  mongoose.model('user',  UserShema);
 

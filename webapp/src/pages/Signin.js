@@ -21,11 +21,13 @@ const SignIn = () => {
         }).then( (res)=>{
 
             setkeyPass(res.data.totken );
-
+            setemail(res.data.email)
             localStorage.setItem("keyPass" ,keyPass );
             localStorage.setItem("firstName" ,res.data.firstName );
             localStorage.setItem("lastName" ,res.data.lastName );
             localStorage.setItem("profilePicture" , res.data.profilePicture );
+            localStorage.setItem("email" , res.data.email );
+            
             
             alert(res.data.token) ;
             navigate("/") ;
